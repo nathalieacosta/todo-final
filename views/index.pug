@@ -1,0 +1,20 @@
+html
+  head
+    title= title
+  body
+    h1= message
+    h3 My to-dos
+    form(id='index' action='/' method='post')
+        input(
+            name='todo'
+            type='text'
+            placeholder='Type todo here'
+        )
+        input(
+            type='submit'
+            value='Submit'
+        )
+    for todo in todolist
+        li= todo
+    else
+        p there are no todos... yet
